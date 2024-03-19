@@ -1,9 +1,9 @@
 :root {
-  --bg-color: #F5F5F5;
-  --text-color: #312A4E;
-  --accent-color: #FFAB6B;
+  --bg-color: #f5f5f5;
+  --text-color: #312a4e;
+  --accent-color: #ffab6b;
   --main-font: Raleway;
-  --accent-font: 'STIX Two Text';
+  --accent-font: "STIX Two Text";
 }
 
 *,
@@ -15,8 +15,8 @@
 .page {
   min-inline-size: 360px;
   margin: 0;
-  background-color: var(--bg-color, #F5F5F5);
-  color: var(--text-color, #312A4E);
+  background-color: var(--bg-color, #f5f5f5);
+  color: var(--text-color, #312a4e);
   font-family: var(--main-font, sans-serif);
 }
 
@@ -35,6 +35,36 @@ figure {
 .heading {
   font-family: var(--accent-font, serif);
   font-weight: bold;
-  line-height: .9;
+  line-height: 0.9;
   text-align: center;
+}
+
+.content-section {
+  padding: 0 5vi;
+}
+
+.header {
+  margin-block-start: 10%;
+}
+
+.header__title {
+  font-size: clamp(3.75rem, 2.5rem + 5.5556vw, 7.5rem);
+  margin-block-end: 40px;
+}
+
+.content__title {
+  font-size: 30px;
+  margin: 7% 0 2.5%;
+}
+
+.content__text-block {
+  font-size: 18px;
+}
+
+.content__text-block .content__paragraph:not(:last-of-type) {
+  margin-block-end: 1.5em;
+}
+
+.content__text-block a {
+  color: inherit;
 }
