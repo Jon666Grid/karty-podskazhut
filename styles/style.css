@@ -32,6 +32,20 @@ figure {
   margin: 0;
 }
 
+a:focus,
+button:focus {
+  outline: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 1px solid currentColor;
+}
+
+button:disabled {
+  pointer-events: none;
+}
+
 .heading {
   font-family: var(--accent-font, serif);
   font-weight: bold;
@@ -127,4 +141,84 @@ figure {
   text-align: center;
   padding: 20px 0;
   border-bottom: 1px solid currentColor;
+}
+
+.content__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-block-start: 7%;
+  border: 1px solid currentColor;
+  aspect-ratio: 4/3;
+}
+
+.content__card-title {
+  font-size: 60px;
+}
+
+.content__card-subtitle {
+  font-size: 18px;
+}
+
+.colored-text {
+  position: relative;
+  display: inline-block;
+}
+
+.colored-text::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inline-size: calc(100% + 8px);
+  block-size: .5ch;
+  background-color: var(--accent-color);
+  inset-block-end: .3ch;
+  inset-inline-start: -4px;
+}
+
+.header__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-block-start: 1px solid currentColor;
+  border-block-end: 1px solid currentColor;
+  padding-block: 20px;
+}
+
+.header__theme-toggler {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+.header__theme-button {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  font-family: inherit;
+  padding: 0;
+  font-size: 18px;
+  color: currentColor;
+  cursor: pointer;
+}
+
+.header__theme-button:hover {
+  text-decoration: underline;
+}
+
+.header__theme-button_is-active {
+  font-weight: 700;
+}
+
+.header__theme-button_is-active::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inline-size: calc(100% + 8px);
+  block-size: .5ch;
+  background-color: var(--accent-color);
+  inset-block-end: .3ch;
+  inset-inline-start: -4px;
 }

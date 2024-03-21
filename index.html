@@ -14,6 +14,27 @@
   <body class="page theme_dark">
     <header class="header">
       <h1 class="heading content-section header__title">Карты подскажут</h1>
+      <nav class="header__menu content-section">
+        <div class="header__logo">
+          <svg xmlns="http://www.w3.org/2000/svg" width="135" height="25">
+            <use href="./images/logo.svg#logo"></use>
+          </svg>
+        </div>
+        <ul class="header__theme-toggler">
+          <li>
+            <button class="header__theme-button header__theme-button_type_dark">
+              Тёмная
+            </button>
+          </li>
+          <li>
+            <button disabled
+              class="header__theme-button header__theme-button_type_light header__theme-button_is-active"
+            >
+              Светлая
+            </button>
+          </li>
+        </ul>
+      </nav>
     </header>
     <main class="content content-section">
       <h2 class="heading content__title">
@@ -46,23 +67,24 @@
       <figure class="content__figure">
         <picture>
           <source
-          srcset="./images/cards-1x.avif 1x, ./images/cards-2x.avif 2x"
-          type="image/avif"
+            srcset="./images/cards-1x.avif 1x, ./images/cards-2x.avif 2x"
+            type="image/avif"
           />
           <source
-          srcset="./images/cards-1x.webp 1x, ./images/cards-2x.webp 2x"
-          type="image/webp"
+            srcset="./images/cards-1x.webp 1x, ./images/cards-2x.webp 2x"
+            type="image/webp"
           />
-        <img
-        loading="lazy"
-        class="content__picture"
-        srcset="./images/cards-1x.png 1x, ./images/cards-2x.png 2x"
-        alt="Колода Oblique Strategies на деревянном столе">
-      </picture>
+          <img
+            loading="lazy"
+            class="content__picture"
+            srcset="./images/cards-1x.png 1x, ./images/cards-2x.png 2x"
+            alt="Колода Oblique Strategies на деревянном столе"
+          />
+        </picture>
         <figcaption class="content__picture-caption">
           <p>Колода Oblique Strategies</p>
         </figcaption>
-    </figure>
+      </figure>
       <div class="content__text-block">
         <p class="content__paragraph">
           Oblique Strategies в основном используют музыканты, но колода подходит
@@ -114,7 +136,12 @@
           >.
         </p>
       </div>
-
+      <article class="content__card">
+        <h3 class="content__card-title heading">
+          Use an <span class="colored-text">old idea</span>
+        </h3>
+        <p class="content__card-subtitle">Воспользуйтесь старой идеей</p>
+      </article>
       <h2 class="heading content__title">Кто пользовался Oblique Strategies</h2>
       <div class="content__text-block">
         <ul class="content__list">
