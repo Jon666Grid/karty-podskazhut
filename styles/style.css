@@ -12,6 +12,12 @@
   box-sizing: border-box;
 }
 
+.theme_dark {
+  --bg-color: #171717;
+  --text-color: #B3B3B3;
+  --accent-color: transparent;
+}
+
 .page {
   min-inline-size: 360px;
   margin: 0;
@@ -221,4 +227,31 @@ button:disabled {
   background-color: var(--accent-color);
   inset-block-end: .3ch;
   inset-inline-start: -4px;
+}
+
+.footer {
+  margin-block-start: 10%;
+  padding: 2.5%;
+  text-align: center;
+  border-block-start: 1px solid currentColor;
+}
+
+.footer__copyright {
+  font-size: 18px;
+}
+
+.theme_dark .header__theme-button_is-active::after {
+  background: url(../images/pattern.svg);
+}
+
+.theme_dark .colored-text::after {
+  background: url(../images/pattern.svg);
+}
+
+.theme_dark .content__text-block_type_first-lettered .content__paragraph:first-of-type::first-letter {
+  border: 1px solid currentColor;
+}
+
+.theme_dark .content__list li::before {
+  background: no-repeat url(../images/marker-dark.svg);
 }
